@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 0deg 0% 100%;
+    --color-foreground: 210deg 13% 13%;
+    --color-surface: 0deg 0% 100% / 90%;
+    --color-overlay: 0deg 0% 0% / 40%;
+    --color-panel: 0deg 0% 100%;
+    --color-focus: 226deg 75% 75%;
+    --color-selection: 224deg 100% 50% / 18%;
+
+    --color-default-9-contrast: 0deg 0% 100%;
+    --color-primary-9-contrast: 0deg 0% 100%;
+    --color-danger-9-contrast: 0deg 0% 100%;
+
+    --color-default-1: 240deg 20% 99%;
+    --color-default-2: 240deg 20% 98%;
+    --color-default-3: 240deg 11% 95%;
+    --color-default-4: 240deg 10% 92%;
+    --color-default-5: 230deg 11% 89%;
+    --color-default-6: 240deg 10% 86%;
+    --color-default-7: 233deg 10% 82%;
+    --color-default-8: 231deg 10% 75%;
+    --color-default-9: 231deg 6% 57%;
+    --color-default-10: 226deg 5% 53%;
+    --color-default-11: 220deg 6% 40%;
+    --color-default-12: 210deg 13% 13%;
+
+    --color-primary-1: 240deg 33% 99%;
+    --color-primary-2: 225deg 100% 98%;
+    --color-primary-3: 222deg 89% 96%;
+    --color-primary-4: 224deg 100% 94%;
+    --color-primary-5: 224deg 100% 91%;
+    --color-primary-6: 225deg 100% 88%;
+    --color-primary-7: 226deg 87% 82%;
+    --color-primary-8: 226deg 75% 75%;
+    --color-primary-9: 226deg 70% 55%;
+    --color-primary-10: 226deg 65% 52%;
+    --color-primary-11: 226deg 56% 50%;
+    --color-primary-12: 226deg 50% 24%;
+
+    --color-danger-1: 0deg 100% 99%;
+    --color-danger-2: 0deg 100% 98%;
+    --color-danger-3: 357deg 90% 96%;
+    --color-danger-4: 358deg 100% 93%;
+    --color-danger-5: 359deg 100% 90%;
+    --color-danger-6: 359deg 94% 87%;
+    --color-danger-7: 359deg 77% 81%;
+    --color-danger-8: 359deg 70% 74%;
+    --color-danger-9: 358deg 75% 59%;
+    --color-danger-10: 358deg 69% 55%;
+    --color-danger-11: 358deg 65% 49%;
+    --color-danger-12: 351deg 63% 24%;
+  }
+
+  .dark {
+    --color-background: 240deg 6% 7%;
+    --color-foreground: 220deg 9% 94%;
+    --color-surface: 0deg 0% 0% / 25%;
+    --color-overlay: 0deg 0% 0% / 60%;
+    --color-panel: 220deg 6% 10%;
+    --color-focus: 226deg 45% 48%;
+    --color-selection: 225deg 98% 62% / 42%;
+
+    --color-default-9-contrast: 0deg 0% 100%;
+    --color-primary-9-contrast: 0deg 0% 100%;
+    --color-danger-9-contrast: 0deg 0% 100%;
+
+    --color-default-1: 240deg 6% 7%;
+    --color-default-2: 220deg 6% 10%;
+    --color-default-3: 225deg 6% 14%;
+    --color-default-4: 210deg 7% 16%;
+    --color-default-5: 214deg 7% 19%;
+    --color-default-6: 213deg 8% 23%;
+    --color-default-7: 213deg 8% 28%;
+    --color-default-8: 212deg 8% 38%;
+    --color-default-9: 219deg 6% 44%;
+    --color-default-10: 222deg 5% 49%;
+    --color-default-11: 216deg 7% 71%;
+    --color-default-12: 220deg 9% 94%;
+
+    --color-primary-1: 231deg 29% 9%;
+    --color-primary-2: 230deg 31% 11%;
+    --color-primary-3: 225deg 51% 19%;
+    --color-primary-4: 225deg 54% 25%;
+    --color-primary-5: 225deg 52% 30%;
+    --color-primary-6: 226deg 47% 35%;
+    --color-primary-7: 226deg 44% 41%;
+    --color-primary-8: 226deg 45% 48%;
+    --color-primary-9: 226deg 70% 55%;
+    --color-primary-10: 228deg 73% 61%;
+    --color-primary-11: 228deg 100% 81%;
+    --color-primary-12: 224deg 100% 92%;
+
+    --color-danger-1: 0deg 19% 8%;
+    --color-danger-2: 355deg 25% 10%;
+    --color-danger-3: 350deg 53% 15%;
+    --color-danger-4: 348deg 68% 19%;
+    --color-danger-5: 350deg 63% 23%;
+    --color-danger-6: 352deg 53% 29%;
+    --color-danger-7: 355deg 47% 37%;
+    --color-danger-8: 358deg 45% 49%;
+    --color-danger-9: 358deg 75% 59%;
+    --color-danger-10: 360deg 79% 65%;
+    --color-danger-11: 2deg 100% 79%;
+    --color-danger-12: 350deg 100%, 91%;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground selection:bg-selection;
+  }
+}
