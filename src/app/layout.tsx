@@ -1,5 +1,6 @@
 import type { RootLayoutProps } from './layout.types';
 import type { Metadata } from 'next';
+import { ThemeProvider } from '@/components/theme-provider';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -11,9 +12,9 @@ export default function RootLayout(props: RootLayoutProps) {
   const { children } = props;
 
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <body>
-        <main>{children}</main>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
