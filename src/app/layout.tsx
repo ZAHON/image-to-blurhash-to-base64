@@ -2,6 +2,7 @@ import type { RootLayoutProps } from './layout.types';
 import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/navbar';
+import { Main } from '@/components/main';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -17,7 +18,7 @@ export default function RootLayout(props: RootLayoutProps) {
       <body>
         <ThemeProvider>
           <Navbar />
-          {children}
+          <Main>{children}</Main>
         </ThemeProvider>
       </body>
     </html>
