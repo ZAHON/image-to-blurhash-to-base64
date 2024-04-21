@@ -25,12 +25,6 @@ export interface IconButtonRootProps extends ComponentPropsWithRef<'button'> {
   loading?: boolean;
 
   /**
-   * The size of the icon button.
-   * @default "2"
-   */
-  size?: '1' | '2' | '3' | '4';
-
-  /**
    * The type of the icon button.
    * @default "button"
    */
