@@ -60,6 +60,9 @@ export default {
           12: 'hsl(var(--color-danger-12) / <alpha-value>)',
         },
       },
+      spacing: {
+        '8xl': '88rem',
+      },
     },
   },
   plugins: [tailwindcssAnimate],
